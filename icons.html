@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Spin wheeler - text</title>
+  <title>Spin wheeler - Icons</title>
 
 <style>
 body
@@ -15,7 +15,7 @@ body
 
 /* Sets the background image for the wheel */
 td.example_wheel_of_fortune {
-    background: url(img/fortune_wheel_back.png);
+    background: url(img/fortune_wheel_color.png);
     background-position: bottom center;
     background-repeat: no-repeat;
     vertical-align: bottom;
@@ -82,7 +82,7 @@ h1 {
 </head>
 
 <body translate="no" >
-<h1>Spin Wheeler - Text only</h1>
+<h1>Spin Wheeler - Icons</h1>
   <div class="example_wheel">
         <table cellpadding="0" cellspacing="0" border="0">
             <tr>
@@ -109,23 +109,29 @@ h1 {
     <script>
     // Create new wheel object specifying the parameters at creation time.
 var theWheel = new Winwheel({
-	'outerRadius'     : 212,        // Set outer radius so wheel fits inside the background.
-	'innerRadius'     : 75,         // Make wheel hollow so segments don't go all way to center.
-	'textFontSize'    : 20,         // Set default font size for the segments.
-	'textOrientation' : 'curved', // Make text vertial so goes down from the outside of wheel.
-	'textAlignment'   : 'center',    // Align text to outside of wheel.
-	'textFillStyle'	  : '#222',
-	'numSegments'     : 8,         // Specify number of segments.
+	'numSegments'       : 8,                // Specify number of segments.
+    'outerRadius'       : 212,              // Set outer radius so wheel fits inside the background.
+	'innerRadius'     	: 100,
+    'drawText'          : true,             // Code drawn text can be used with segment images.
+    'textFontSize'      : 16,               // Set text options as desired.
+    'textOrientation'   : 'curved',
+    'textAlignment'     : 'outer',
+    'textMargin'        : 90,
+    'textFontFamily'    : 'monospace',
+    'textStrokeStyle'   : 'black',
+    'textLineWidth'     : 3,
+    'textFillStyle'     : 'white',
+    'drawMode'          : 'segmentImage',  
 	'segments'        :             // Define segments including colour and text.
 	[                               // font size and test colour overridden on backrupt segments.
-		{'fillStyle' : '#30b2fe', 'text' : 'FREE SPIN', 'textFontSize': 18},
-		{'fillStyle' : '#00ba88', 'text' : '10% OFF'},
-		{'fillStyle' : '#fd2647', 'text' : 'NO LUCK'},
-		{'fillStyle' : '#fecc45', 'text' : 'FREE SHIPPING', 'textFontSize': 12},
-		{'fillStyle' : '#00ba88', 'text' : '15% OFF'},
-		{'fillStyle' : '#fd2647', 'text' : 'NO LUCK'},
-		{'fillStyle' : '#fecc45', 'text' : 'FREE SHIPPING', 'textFontSize': 12},
-		{'fillStyle' : '#bb33ef', 'text' : '20% OFF'}
+		{'image' : 'img/dice.png', 'text' : 'FREE SPIN', 'textFontSize': 18},
+		{'image' : 'img/offer.png', 'text' : '10% OFF'},
+		{'image' : 'img/sad.png', 'text' : 'NO LUCK'},
+		{'image' : 'img/shipping.png', 'text' : 'FREE SHIPPING', 'textFontSize': 12},
+		{'image' : 'img/offer.png', 'text' : '15% OFF'},
+		{'image' : 'img/sad.png', 'text' : 'NO LUCK'},
+		{'image' : 'img/shipping.png', 'text' : 'FREE SHIPPING', 'textFontSize': 12},
+		{'image' : 'img/offer.png', 'text' : '20% OFF'}
 	],
 	'animation' :           // Specify the animation to use.
 	{
