@@ -113,10 +113,10 @@ var theWheel = new Winwheel({
     'outerRadius'       : 212,              // Set outer radius so wheel fits inside the background.
 	'innerRadius'     	: 100,
     'drawText'          : true,             // Code drawn text can be used with segment images.
-    'textFontSize'      : 16,               // Set text options as desired.
+    'textFontSize'      : 20,               // Set text options as desired.
     'textOrientation'   : 'curved',
     'textAlignment'     : 'outer',
-    'textMargin'        : 90,
+    'textMargin'        : 12,
     'textFontFamily'    : 'monospace',
     'textStrokeStyle'   : 'black',
     'textLineWidth'     : 3,
@@ -124,7 +124,7 @@ var theWheel = new Winwheel({
     'drawMode'          : 'segmentImage',  
 	'segments'        :             // Define segments including colour and text.
 	[                               // font size and test colour overridden on backrupt segments.
-		{'image' : 'img/dice.png', 'text' : 'FREE SPIN', 'textFontSize': 18},
+		{'image' : 'img/dice.png', 'fillStyle' : '#00ba88', 'text' : 'FREE SPIN', 'textFontSize': 18},
 		{'image' : 'img/offer.png', 'text' : '10% OFF'},
 		{'image' : 'img/sad.png', 'text' : 'NO LUCK'},
 		{'image' : 'img/shipping.png', 'text' : 'FREE SHIPPING', 'textFontSize': 12},
